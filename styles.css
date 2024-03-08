@@ -1,0 +1,39 @@
+
+/* Include this at the top of your CSS file */
+
+
+
+
+#topNav {
+    text-align: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    margin-right: 30px;
+     
+}
+
+#topNav ul {
+    line-height: 1.5;
+    list-style-type: none; /* Removes bullet points from list */
+    padding: 0; /* Removes default padding */
+}
+
+
+#topNav ul li {
+     /* Puts the list items side by side */
+    margin-left: 20px; /* Adds space between each list item/link */
+}
+
+
+#topNav ul li a {
+    text-decoration: none; /* Removes the underline from links */
+    color: #000; /* Sets the text color */
+    font-family: Arial, sans-serif; /* Sets the font */
+}
+
+
+#topNav ul li a:hover {
+    color: #007BFF; /* Changes link color on mouse-over */
+}
