@@ -1,17 +1,57 @@
 
 /* Include this at the top of your CSS file */
 
+body {
+    background-color: #000000;
+}
+
+header {
+    font-size: 20pt;
+}
+.vertical-belt {
+    position: fixed;
+    top: 0; /* Adjust based on the height of your navigation bar */
+    right: 0;
+    width: 10vw; /* Width of the vertical belt */
+    height: 100vh;
+    background-color: #116466;
+    z-index: 99; /* Ensure it's above the page content */
+    
+}
+
+.vertical-belt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -16vw; /* Adjust to match the desired gradient width */
+    width: 18vw; /* Gradient width */
+    height: 100%;
+    background: linear-gradient(to left,#116466 10%, #000000 100%);
+    z-index: -1; /* Place the gradient below the belt content */
+}
 
 
+.vertical-belt::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Width of the vertical line */
+    background-color: #ffcb9a; /* Color of the vertical line */
+    z-index: -1; /* May not be needed unless you want the line under something else within .vertical-belt */
+}
 
 #topNav {
     text-align: right;
     position: fixed;
+    width: 10vw; 
+    height: 100vh;
     top: 0;
     right: 0;
     margin: 10px;
     margin-right: 30px;
-     
+    z-index: 100;
 }
 
 #topNav ul {
@@ -29,11 +69,24 @@
 
 #topNav ul li a {
     text-decoration: none; /* Removes the underline from links */
-    color: #000; /* Sets the text color */
+    color: #ffcb9a; /* Sets the text color */
     font-family: Arial, sans-serif; /* Sets the font */
+    font-size: 18pt;
 }
 
 
 #topNav ul li a:hover {
-    color: #007BFF; /* Changes link color on mouse-over */
+    color: #d1e8e2; /* Changes link color on mouse-over */
+}
+
+
+p{
+    font-size: 18pt;
+    color: #ffcb9a;
+    z-index: 50;
+}
+h2 {
+    font-size: 18pt;
+    color: #ffcb9a;
+    z-index: 50;
 }
